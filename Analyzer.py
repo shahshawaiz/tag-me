@@ -5,7 +5,6 @@ import six.moves.urllib as urllib
 import tarfile
 import tensorflow as tf
 from PIL import Image
-from object_detection.utils import ops as utils_ops
 from utils import label_map_util
 from utils import visualization_utils as vis_util
 
@@ -87,26 +86,6 @@ def run_inference_for_single_image(image, graph):
           tensor_dict[key] = tf.get_default_graph().get_tensor_by_name(
               tensor_name)
 
-      #  if tensor is detection mask ?
-      if 'detection_masks' in tensor_dict:
-
-        # The following processing is only for single image
-        detection_boxes = tf.squeeze(tensor_dict['detection_boxes'], [0])
-        detection_masks = tf.squeeze(tensor_dict['detection_masks'], [0])
-
-        # Reframe is required to translate mask from box coordinates to image coordinates and fit the image size.
-        real_num_detection = tf.cast(tensor_dict['num_detections'][0], tf.int32)
-        detection_boxes = tf.slice(detection_boxes, [0, 0], [real_num_detection, -1])
-        detection_masks = tf.slice(detection_masks, [0, 0, 0], [real_num_detection, -1, -1])
-        detection_masks_reframed = utils_ops.reframe_box_masks_to_image_masks(
-            detection_masks, detection_boxes, image.shape[0], image.shape[1])
-        detection_masks_reframed = tf.cast(
-            tf.greater(detection_masks_reframed, 0.5), tf.uint8)
-
-        # Follow the convention by adding back the batch dimension
-        tensor_dict['detection_masks'] = tf.expand_dims(
-            detection_masks_reframed, 0)
-
       # get image tensor ?
       image_tensor = tf.get_default_graph().get_tensor_by_name('image_tensor:0')
 
@@ -136,7 +115,7 @@ def demo(image_np):
   # run recognition
   output_dict = run_inference_for_single_image(image_np, detection_graph)
 
-  # print labels
+  # get labels
   labels = vis_util.get_labels(
       image_np,
       output_dict['detection_boxes'],
@@ -151,7 +130,7 @@ def demo(image_np):
 
 # get image
 PATH_TO_TEST_IMAGES_DIR = 'test_images'
-image_path = os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image1.jpg')
+image_path = os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image2.jpg')
 image = Image.open(image_path)
 image_np = load_image_into_numpy_array(image)
 

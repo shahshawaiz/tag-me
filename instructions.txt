@@ -1,0 +1,25 @@
+A) Write a small pet project to get into coding again. You might want to use a language as Python which is also good for this Master! The Code can be relatively simple (as a simple game with console output).
+
+B) Make sure each Person has applied the following topics on the code which have been taught in the lecture:
+
+UML (at least 3 diagrams)
+Metrics (at least two. Sonarcube would be great)
+Clean Code Development (at least 5 points you can show me)
+Build Management with any Build System as Ant, Maven, Gradle, etc.
+Continous Delivery (show me your pipeline in e.g. Jenkins and Travis-CI)
+AOP (show me where you could have integrated AOP stuff => the jointpoints)
+DSL (Create a small DSL Demo example snippet in your code even if it does not contribute to your project)
+Functional Programming (prove that you have covered all functional definitions in your code as
+	only final data structures
+	(mostly) side effect free functions
+	the use of higher order functions
+	functions as parameters and return values
+	use clojures / anonymous functions
+Show me an idea where to use a logical solver in your code and how you would do it!
+Write a little code fragment (like data preparation etc.) in Scala or Clojure!
+
+Please give me a hint as a checklist with one sentence for each 1-9 where I can find the info for points 1-9!!
+
+The contribution in Moodle is just a Link to GitHub in the comment section (@edlich).
+
+The complete documentation must be found in the GitHub doc (e.g. ReadMe or Wiki). It should explain also B  in three pages.

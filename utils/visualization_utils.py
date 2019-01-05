@@ -959,6 +959,9 @@ def get_labels(
   if not max_boxes_to_draw:
     max_boxes_to_draw = boxes.shape[0]
   for i in range(min(max_boxes_to_draw, boxes.shape[0])):
+
+    label = {}
+
     if scores is None or scores[i] > min_score_thresh:
       box = tuple(boxes[i].tolist())
       if instance_masks is not None:
@@ -975,7 +978,7 @@ def get_labels(
           if not agnostic_mode:
             if classes[i] in category_index.keys():
               class_name = category_index[classes[i]]['name']
-              labels.append(class_name)
+              label['label'] = class_name
             else:
               class_name = 'N/A'
             display_str = str(class_name)
@@ -984,12 +987,17 @@ def get_labels(
             display_str = '{}%'.format(int(100*scores[i]))
           else:
             display_str = '{}: {}%'.format(display_str, int(100*scores[i]))
+
+          label['score'] = display_str
+
         box_to_display_str_map[box].append(display_str)
         if agnostic_mode:
           box_to_color_map[box] = 'DarkOrange'
         else:
           box_to_color_map[box] = STANDARD_COLORS[
               classes[i] % len(STANDARD_COLORS)]
+    if len(label):
+      labels.append(label)
 
   # Draw all boxes onto image.
   for box, color in box_to_color_map.items():

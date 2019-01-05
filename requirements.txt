@@ -1,4 +1,3 @@
 numpy
-tarfile
 tensorflow
 PIL

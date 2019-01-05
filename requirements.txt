@@ -1,0 +1,7 @@
+numpy
+os  
+six.moves.urllib  
+tarfile
+tensorflow
+PIL
+utils   

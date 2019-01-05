@@ -1,6 +1,4 @@
 numpy
-six.moves.urllib  
 tarfile
 tensorflow
 PIL
-utils   

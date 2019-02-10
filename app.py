@@ -11,7 +11,7 @@ def analyze():
          "message": "Welcome to TagMe. Send me your images, get your labels ;) "
     }
 
-    return jsonify(response), 201
+    return jsonify(response), 200
 
 @app.route('/', methods=['POST'])
 def analyze():
@@ -27,7 +27,7 @@ def analyze():
     	"labels": labels
     }
 
-    return jsonify(response), 201
+    return jsonify(response), 200
 
 @app.errorhandler(404)
 def not_found(error):

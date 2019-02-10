@@ -10,13 +10,13 @@ Following project was completed in two milestones;
 
 Following are the UML diagrams of project TagMe.
 
-## 1. Activity Diagram
+### 1. Activity Diagram
 ![Activity](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/activity-diagrams.PNG)
 
-## 2. Use Case Diagram
+### 2. Use Case Diagram
 ![Use Case](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/Project%20-%20Use%20Case.jpg)
 
-## 3. Deployment Diagram
+### 3. Deployment Diagram
 ![Deployment](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/deployment%20diag..jpg)
 
 # Metrics
@@ -32,14 +32,14 @@ For Example;
 
 Software metrics that were monitor during course of development were;
 
-## 1. Complexity Metrics
+### 1. Complexity Metrics
 In post-development code analysis, SonarQube indicated presence of Cyclomatic Complexity with a score of 17.
 
 ![Complexity Score](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/complexity.PNG)
 
 Cyclomatic Complexity measures the minimum number of test cases required for full test coverage. Following measure indicates that my project requires 17 additional test cases for getting full test coverage.
 
-## 2. Architectural Metrics
+### 2. Architectural Metrics
 Following are screenshots from metric measures.
 
 ![Size](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/size.PNG)
@@ -47,27 +47,27 @@ Following are screenshots from metric measures.
 
 # Clean Code Development
 
-## 1. Consistent naming convention
+### 1. Consistent naming convention
 Throughout coding, naming scheme of camel case is used for both variables and functions. Moreover, for immutable/final variables all-upper-casing scheme is used.
 
-## 2. Minimizing of Side-Effect using Context Management
+### 2. Minimizing of Side-Effect using Context Management
 Wherever necessary, side-effects have been tried to minimized by isolating its effect at local scope by making use of python&#39;s context management.
 
 ![Context Management Usage](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/context-maagement.PNG)
 
-## 3. Modularity
+### 3. Modularity
 Source code has been divided into two modules. Module &quot;Analyzer&quot; is responsible for object recognition tasks, while module &quot;Router&quot; is responsible for routing of incoming and outgoing rest API requests.
 
 ![Module Analyzer(analyzer.py) being imported in Module Router(app.py)](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/modularity.PNG)
 
-## 4. Exception Handling
+### 4. Exception Handling
 Wherever necessary exception handling blocks have been added to ensure that no runtime errors are thrown.
 
 ![Exception Handling](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/error%20hanlding.PNG)
 
 Exception Handling Usage
 
-## 5. Configurable Data at Higher Level
+### 5. Configurable Data at Higher Level
 All configurable data (for example: Directory names, paths), have been placed at higher level, making tweaking of values easier for the purpose of debugging.
 
 ![Configurable Data](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/conigurable%20at%20higher%20level.PNG)
@@ -105,22 +105,22 @@ Following is the output of following script;
 
 Throughout this project, good practices for functional programming have been adopted. Following are few examples of such practices;
 
-## 1. Final Data Structures Usage
+### 1. Final Data Structures Usage
 Few variables have been made made immutable in code. Hence using as constant.
 
 ![Final](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/conigurable%20at%20higher%20level.PNG)
 
-## 2. Side Effect Free Functions
+### 2. Side Effect Free Functions
 As discussed earlier, wherever necessary context management has been used. So that its effect could remain locally. Hence using them would not result any side effects.
 
 ![Side Effect Free](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/context-maagement.PNG)
 
-## 3. Use of higher order functions
+### 3. Use of higher order functions
 Higher order functions like map and filter have also been used.
 
 ![Higher Order Function](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/map.PNG)
 
-## 4. Clojures/Anonymous Functions
+### 4. Clojures/Anonymous Functions
 
 Usage of anonymous functions like &quot;Lamda&quot; have also been made, for getting rid from unnecessary function signature bodies where required.
 

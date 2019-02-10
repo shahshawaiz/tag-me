@@ -122,6 +122,6 @@ Higher order functions like map and filter have also been used.
 
 ### 4. Clojures/Anonymous Functions
 
-Usage of anonymous functions like &quot;Lamda&quot; have also been made, for getting rid from unnecessary function signature bodies where required.
+Usage of anonymous functions like &quot;Lambda&quot; have also been made, for getting rid from unnecessary function signature bodies where required.
 
 ![Anonymous Function](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/lambda.PNG)

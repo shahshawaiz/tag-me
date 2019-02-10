@@ -111,7 +111,7 @@ Few variables have been made made immutable in code. Hence using as constant.
 ![Final](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/conigurable%20at%20higher%20level.PNG)
 
 ### 2. Side Effect Free Functions
-As discussed earlier, wherever necessary context management has been used. So that its effect could remain locally. Hence using them would not result any side effects.
+As discussed earlier, wherever necessary context management has been used. So that effect of overlying function could remain locally. Hence using them would not result any side effects.
 
 ![Side Effect Free](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/context-maagement.PNG)
 

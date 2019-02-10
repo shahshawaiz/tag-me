@@ -11,70 +11,54 @@ A Restful API interface for handling HTTP requests. API endpoints were developed
 Following are the UML diagrams of project TagMe.
 
 1.Activity Diagram
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Activity](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/activity-diagrams.PNG)
 
-1. 2.Use Case Diagram
+2.Use Case Diagram
+![Use Case](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/Project%20-%20Use%20Case.jpg)
 
-(image)
-
-1. 3.Deployment Diagram
-
-(image)
+3.Deployment Diagram
+![Deployment](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/deployment%20diag..jpg)
 
 # Metrics
-
 For the code analysis and review, the industry standard tool, &quot;SonarQube&quot; was used. Initially code smell was significantly higher, which was gradually mitigated by applying refactoring techniques.
 
-Please note that during code analysis, source codes from 3
-
-# rd
- party libraries (e.g. object detection module from TensorFlow) were excluded.
+Please note that during code analysis, source codes from 3rd party libraries (e.g. object detection module from TensorFlow) were excluded.
 
 For Example;
-
 - In one case, a large code block was broken down into smaller code blocks, hence reducing code complexity.
 - Function parameters were increased/decreased for making method calls more simpler and easier.
 - Logically related pieces of code were merged together under same functions.
 
 Software metrics that were monitor during course of development were;
 
-1. 1.Complexity Metrics
-
+1.Complexity Metrics
 In post-development code analysis, SonarQube indicated presence of Cyclomatic Complexity with a score of 17.
 
-(image)
-
-Complexity Score
+![Complexity Score](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/complexity.PNG)
 
 Cyclomatic Complexity measures the minimum number of test cases required for full test coverage. Following measure indicates that my project requires 17 additional test cases for getting full test coverage.
 
-1. 2.Architectural Metrics
-
+2.Architectural Metrics
 Following are screenshots from metric measures.
 
-(image)
+![Size](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/size.PNG)
 
-Architectural Metric Measures
 
 # Clean Code Development
 
-1. 1.Consistent naming convention
-
+1.Consistent naming convention
 Throughout coding, naming scheme of camel case is used for both variables and functions. Moreover, for immutable/final variables all-upper-casing scheme is used.
 
-1. 2.Minimizing of Side-Effect using Context Management
-
+2.Minimizing of Side-Effect using Context Management
 Wherever necessary, side-effects have been tried to minimized by isolating its effect at local scope by making use of python&#39;s context management.
 
-(image)
+![Context Management Usage](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/context-maagement.PNG)
 
-Context Management Usage
-
-1. 3.Modularity
+3.Modularity
 
 Source code has been divided into two modules. Module &quot;Analyzer&quot; is responsible for object recognition tasks, while module &quot;Router&quot; is responsible for routing of incoming and outgoing rest API requests.
 
-(image)
+![Modularity](https://raw.githubusercontent.com/shahshawaiz/tag-me/master/doc/images/modularity.PNG)
 
 Module Analyzer(analyzer.py) being imported in Module Router(app.py)
 

@@ -62,6 +62,7 @@ def get_detection_graph():
 
     # get ref to graph def
     od_graph_def = tf.GraphDef()
+    
     with tf.gfile.GFile(PATH_TO_FROZEN_GRAPH, 'rb') as fid: # read frozen graph in rb mode 
 
       # serialized frozen graph 

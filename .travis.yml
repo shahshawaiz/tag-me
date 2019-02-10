@@ -9,3 +9,8 @@ install:
 script:
   - echo "skipping tests"  
   # - py.test --cov-report term-missing --cov app -v
+deploy:
+  provider: heroku
+  api_key:
+    secure: "a4137ff6-1763-46d8-b8ab-435225dcdf00"
+    app: tag-me

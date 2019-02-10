@@ -3,7 +3,15 @@ import analyzer
 
 app = Flask(__name__)
 
-# new cmment
+@app.route('/', methods=['GET'])
+def analyze():
+
+    response = {
+        "status": 200,
+         "message": "Welcome to TagMe. Send me your images, get your labels ;) "
+    }
+
+    return jsonify(response), 201
 
 @app.route('/', methods=['POST'])
 def analyze():

@@ -1,5 +1,5 @@
 # Introduction
-TagMe is an end-to-end pipeline for object recognition requests with a Rest API interface. It can be thought as a basic version of Google Vision Cloud API.
+TagMe is an end-to-end pipeline for object recognition requests with a Rest API interface, a basic version of Google Vision Cloud API.
 
 Following project was completed in two milestones;
 
